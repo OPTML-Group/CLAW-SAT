@@ -12,7 +12,7 @@ for VIEWS_TYPE in "${VIEWS[@]}"; do
     VIEWS=${VIEWS_TYPE} \
     DATASET=csn/python \
     MODEL_NAME=${PRETRAINED_MODEL} \
-        time make adv-pretrain-contracode
+        time make pretrain-contracode
 
     for DECODER_ONLY in "${TRAIN_DECODER_ONLY[@]}"; do
             
@@ -30,13 +30,13 @@ for VIEWS_TYPE in "${VIEWS[@]}"; do
         EPOCHS=1 \
         CHECKPOINT="${PRETRAINED_MODEL}/ckpt_pretrain_ep0100_step0075000.pth" \
         MODEL_NAME=${FINETUNED_MODEL} \
-            time make finetune-contracode
+            # time make finetune-contracode
 
         # adversarial training starting from the partially finetuned model from above
         NUM_REPLACE=1500
         DATASET_NAME_SMALL="py150"
         EXPT_NAME="v2-3-z_rand_1-pgd_3-no-$TRANSFORM_NAME-$DATASET_NAME_SMALL-$FINETUNED_MODEL-AT"
-        ./experiments/adv_train_seq2seq.sh 1 2 1 false 1 1 true 3 false false false $EXPT_NAME $TRANSFORM_NAME 0.5 0.5 0.01 $DATASET_NAME 1 $FINETUNED_MODEL $NUM_REPLACE 0 $DECODER_ONLY
+        # ./experiments/adv_train_seq2seq.sh 1 2 1 false 1 1 true 3 false false false $EXPT_NAME $TRANSFORM_NAME 0.5 0.5 0.01 $DATASET_NAME 1 $FINETUNED_MODEL $NUM_REPLACE 0 $DECODER_ONLY
 
         # attack and test the trained model
 

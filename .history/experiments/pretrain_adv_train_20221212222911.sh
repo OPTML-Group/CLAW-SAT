@@ -12,7 +12,7 @@ for VIEWS_TYPE in "${VIEWS[@]}"; do
     VIEWS=${VIEWS_TYPE} \
     DATASET=csn/python \
     MODEL_NAME=${PRETRAINED_MODEL} \
-        time make adv-pretrain-contracode
+        time make pretrain-contracode
 
     for DECODER_ONLY in "${TRAIN_DECODER_ONLY[@]}"; do
             
