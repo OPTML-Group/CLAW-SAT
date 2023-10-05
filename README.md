@@ -21,7 +21,7 @@ We integrate contrastive learning (CL) with adversarial learning to co-optimize 
 
 ## Authors
 
-[Jinghan Jia](https://jinghanjia.netlify.app/), [Shashank Srikant](https://shashank-srikant.github.io/),[Tamara Mitrovska](https://superurop.mit.edu/scholars/tamara-mitrovska/), [Chuanggan](http://people.csail.mit.edu/ganchuang/), [Shiyu Chang](https://code-terminator.github.io/), [Sijia Liu](https://lsjxjtu.github.io/),  and  [Una-May O’Reilly](https://alfagroup.csail.mit.edu/unamay).
+[Jinghan Jia](https://jinghanjia.netlify.app/), [Shashank Srikant](https://shashank-srikant.github.io/),[Tamara Mitrovska](https://superurop.mit.edu/scholars/tamara-mitrovska/), [Chuang Gan](http://people.csail.mit.edu/ganchuang/), [Shiyu Chang](https://code-terminator.github.io/), [Sijia Liu](https://lsjxjtu.github.io/),  and  [Una-May O’Reilly](https://alfagroup.csail.mit.edu/unamay).
 
 If you face issues running this codebase, please [open an issue](https://github.com/ALFA-group/adversarial-code-generation/issues) on this repository, and mention as much information to reproduce your issue, including the exact command you have run, the configurations that you have used, the output you see, etc.
 See [posts like these](https://medium.com/nyc-planning-digital/writing-a-proper-github-issue-97427d62a20f) which describe how to communicate problems effectively via Github issues.
